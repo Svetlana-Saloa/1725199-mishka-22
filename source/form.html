@@ -49,8 +49,8 @@
       </nav>
     </header>
     <main class="page-form">
-      <h1 class="page-form__title">Вязание на заказ</h1>
-      <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <h1 class="page-form__title page-form__title--fone">Вязание на заказ</h1>
+      <p class="page-form__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="page-form__form form-order" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="form-order__fieldset">
           <legend class="form-order__legend">тип</legend>
@@ -69,11 +69,11 @@
           <legend class="form-order__legend">цвет</legend>
           <ul class="form-order__list">
             <li class="form-order__item">
-              <input class="form-order__input"  type="checkbox" name="color" value="color-white" id="filter-color-white" checked>
+              <input class="form-order__input" type="checkbox" name="color" value="color-white" id="filter-color-white" checked>
               <label class="form-order__label" for="filter-color-white">Белый</label>
             </li>
             <li class="form-order__item">
-              <input class="form-order__input"  type="checkbox" name="color" value="color-gray" id="filter-color-gray" checked>
+              <input class="form-order__input" type="checkbox" name="color" value="color-gray" id="filter-color-gray" checked>
               <label class="form-order__label" for="filter-color-gray">Серый</label>
             </li>
             <li class="form-order__item">
@@ -85,11 +85,11 @@
               <label class="form-order__label" for="filter-color-black">Черный</label>
             </li>
             <li class="form-order__item">
-              <input class="form-order__input"  type="checkbox" name="color" value="color-pink" id="filter-color-pink">
+              <input class="form-order__input" type="checkbox" name="color" value="color-pink" id="filter-color-pink">
               <label class="form-order__label" for="filter-color-pink">Розовый</label>
             </li>
             <li class="form-order__item">
-              <input class="form-order__input"  type="checkbox" name="color" value="color-orange" id="filter-color-orange">
+              <input class="form-order__input" type="checkbox" name="color" value="color-orange" id="filter-color-orange">
               <label class="form-order__label" for="filter-color-orange">Оранжевый</label>
             </li>
           </ul>
@@ -113,7 +113,7 @@
         </fieldset>
         <fieldset class="form-order__fieldset">
           <div class="form-order__container">
-            <label class="form-order__label" for="your-phone"><b>тел</b></label>
+            <label class="form-order__label form-order__label--you-contact" for="your-phone"><b>тел</b></label>
             <input class="form-order__input" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" name="your-phone" id="your-phone" required>
             <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g opacity="0.2">
@@ -123,7 +123,7 @@
               <path d="M12.6008 6.12356C15.9274 6.12356 18.75 8.79021 18.75 12.1482H20.3629C20.3629 8.00009 16.9355 4.64209 12.7016 4.64209V6.12356H12.6008Z" fill="black"/>
               </g>
             </svg>
-            <label class="form-order__label" for="your-mail"><b>E-mail</b></label>
+            <label class="form-order__label form-order__label--you-contact" for="your-mail"><b>E-mail</b></label>
             <input class="form-order__input" type="email" placeholder="Ваш Email*" name="your-mail" id="your-mail" required>
             <svg width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path opacity="0.2" d="M28 0H4C1.8 0 0 1.8 0 4V17C0 19.2 1.8 21 4 21H28C30.2 21 32 19.2 32 17V4C32 1.8 30.2 0 28 0ZM2 5.3L9 10.6L2 15.9V5.3ZM30 17C30 18.1 29.1 19 28 19H4C2.9 19 2 18.1 2 17L9.8 11.1L14.2 14.4C14.7 14.8 15.4 15 16 15C16.6 15 17.3 14.8 17.8 14.4L22.2 11.1L30 17ZM30 15.8L23 10.5L30 5.2V15.8ZM17.2 13.6C16.8 13.9 16.4 14 16 14C15.6 14 15.1 13.9 14.8 13.6L10.7 10.5L9.9 9.9L2 4C2 2.9 2.9 2 4 2H28C29.1 2 30 2.9 30 4L17.2 13.6Z" fill="black"/>
@@ -131,7 +131,7 @@
           </div>
         </fieldset>
         <fieldset class="form-order__fieldset">
-          <label class="form-order__label" for="more">Доп</label>
+          <label class="form-order__label form-order__label--you-contact" for="more">Доп</label>
           <textarea class="form-order__textarea" id="more" name="more" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <button class="form-order__button button" type="submit">отправить заказ</button>
