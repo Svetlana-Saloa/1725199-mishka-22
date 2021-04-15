@@ -10,3 +10,17 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  min-width: 320px;
+  padding: 0 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    max-width: @desktop-width;
+  }
+}
