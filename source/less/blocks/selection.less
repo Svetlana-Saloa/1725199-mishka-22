@@ -1,31 +1,32 @@
-.selection {
-  height: 206px;
-}
-
 .selection__list {
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  min-width: @mobile-width;
+  margin: 0;
 }
 
 @media (min-width: @tablet-width) {
   .selection__list {
-    min-width: @tablet-width;
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
+    padding: 0 50px;
+  }
+
+  .selection__item--fone1 {
+    width: 50%;
+  }
+
+  .selection__item--fone2 {
+    width: 50%;
   }
 }
 
 @media (min-width: @desktop-width) {
   .selection__list {
-    min-width: @desktop-width;
     display: flex;
-    flex-wrap: no-wrap;
+    flex-wrap: nowrap;
+    padding: 0 50px;
   }
 }
-
 
 .selection__item a {
   text-decoration: none;
@@ -37,36 +38,8 @@
 
 .selection__item--fone1 {
   background-color: @blue-bacbackground;
-  height: 103px;
-  min-width: @mobile-width;
 }
-
-@media (min-width: @tablet-width) {
-  .selection__item--fone1 {
-    height: 119px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .selection__item--fone1 {
-  }
-}
-
 
 .selection__item--fone2 {
   background-color: @dark-blue;
-  height: 103px;
-  flex: 1;
-  max-width: @mobile-width;
-}
-
-@media (min-width: @tablet-width) {
-  .selection__item--fone2 {
-    height: 119px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .selection__item--fone2 {
-  }
 }
