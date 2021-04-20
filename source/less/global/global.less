@@ -11,7 +11,14 @@
   overflow: hidden;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .container {
+  min-width: @mobile-width;
   padding: 0 30px;
 
   @media (min-width: @tablet-width) {
@@ -19,6 +26,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0;
+    margin: 0 auto;
+    max-width: @desktop-width;
   }
 }

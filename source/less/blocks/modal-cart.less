@@ -1,6 +1,5 @@
 .modal-cart {
-  width: 320px;
-  height: 336px;
+  width: 100%;
   border: 1px solid @gray-border;
   box-shadow: 0 5px 10px @cart-shadow;
 }
@@ -13,4 +12,11 @@
   margin: 0;
   padding-left: 25%;
   padding-right: 25%;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-cart {
+    width: 566px;
+    margin: 0 auto;
+  }
 }
