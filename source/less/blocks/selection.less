@@ -1,10 +1,36 @@
-.selection {
-  height: 206px;
+.selection__container li {
+  padding-left: 30px;
 }
 
 .selection__list {
   list-style: none;
   padding: 0;
+  margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .selection__list {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 0 50px;
+  }
+
+  .selection__item--fone1 {
+    width: 50%;
+  }
+
+  .selection__item--fone2 {
+    width: 50%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selection__list {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    max-width: @desktop-width;
+  }
 }
 
 .selection__item a {

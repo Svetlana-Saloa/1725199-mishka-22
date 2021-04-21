@@ -1,6 +1,23 @@
 .main-navigation {
   font-size: 17px;
   line-height: 24px;
+  display: grid;
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation__wraper {
+    display: grid;
+  }
+}
+
+.main-navigation__toggle {
+  width: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation__toggle {
+    display: none;
+  }
 }
 
 .main-navigation__list a {
@@ -9,8 +26,18 @@
   color: @black;
 }
 
+.main-navigation__list2 {
+  display: none;
+}
+
 .main-navigation__list2 a {
   list-style: none;
   text-decoration: none;
   color: @black;
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation__list2 {
+    display: inline-block;
+  }
 }
