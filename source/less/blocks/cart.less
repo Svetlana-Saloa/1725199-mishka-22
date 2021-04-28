@@ -1,24 +1,27 @@
-.site-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.site-list__item a {
+.cart {
   position: relative;
   display: block;
   padding: 28px 0 25px 60px;
   text-decoration: none;
   color: @black;
   border-top: 1px solid @gray-border;
+  border-bottom: 1px solid @gray-border;
+
+  &:hover {
+    color: @black6;
+  }
+
+  &:active {
+    color: @black3;
+  }
 }
 
-.site-list__img-search {
+.cart__form-icon {
   position: absolute;
   left: 30px;
 }
 
-.site-list__img-search path {
+.cart__form-icon path {
   &:hover {
     fill: @blue-bacbackground;
   }
