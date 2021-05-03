@@ -1,5 +1,5 @@
 .selection__container li {
-  padding-left: 30px;
+  padding: 23px 36px 32px 39px;
 }
 
 .selection__list {
@@ -8,10 +8,33 @@
   margin: 0;
 }
 
+.selection__item a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: @white;
+  font-size: 19px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.selection__item span {
+  width: 60%;
+  margin-right: auto;
+}
+
+.selection__item--fone1 {
+  background-color: @blue-bacbackground;
+}
+
+.selection__item--fone2 {
+  background-color: @dark-blue;
+}
+
 @media (min-width: @tablet-width) {
   .selection__list {
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     padding: 0 50px;
   }
 
@@ -22,6 +45,10 @@
   .selection__item--fone2 {
     width: 50%;
   }
+
+  .selection__container {
+    background-color: @gray-fone;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -31,20 +58,4 @@
     margin: 0 auto;
     max-width: @desktop-width;
   }
-}
-
-.selection__item a {
-  text-decoration: none;
-  color: @white;
-  font-size: 19px;
-  line-height: 24px;
-  font-weight: 700;
-}
-
-.selection__item--fone1 {
-  background-color: @blue-bacbackground;
-}
-
-.selection__item--fone2 {
-  background-color: @dark-blue;
 }

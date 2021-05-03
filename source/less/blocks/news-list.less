@@ -7,3 +7,9 @@
 .news-list__item p {
   color: @gray;
 }
+
+@media (min-width: @tablet-width) {
+  .news-list__item:nth-child(-n+2) {
+    display: none;
+  }
+}
