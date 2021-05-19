@@ -1,5 +1,11 @@
+.selection {
+  position: relative;
+  top: -57px;
+  margin-bottom: -57px;
+}
+
 .selection__container li {
-  padding: 23px 36px 32px 39px;
+  padding: 23px 35px 17px 30px;
 }
 
 .selection__list {
@@ -23,15 +29,67 @@
   margin-right: auto;
 }
 
+.selection__interior {
+  fill: @blue-icon;
+  opacity: 50%;
+  width: 20%;
+
+  &:hover {
+    opacity: 70%;
+  }
+
+  &:active {
+    opacity: 30%;
+  }
+}
+
 .selection__item--fone1 {
   background-color: @blue-bacbackground;
+
+  &:hover {
+    background-color: @blue-bg-fone1;
+  }
+
+  &:active {
+    background-color: @blue-bg-fone1;
+  }
 }
 
 .selection__item--fone2 {
   background-color: @dark-blue;
+
+  &:hover {
+    background-color: @emailcolor;
+  }
+
+  &:active {
+    background-color: @emailcolor;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .selection {
+  top: -1px;
+  margin-bottom: 10px;
+  position: relative;
+
+  ::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url('../img/zigzag-fill.svg');
+    background-repeat: repeat;
+    height: 12px;
+    width: 100%;
+    top: 109px;
+    right: 0;
+  }
+}
+
+  .selection__container li {
+    padding: 34px 30px 23px 38px;
+  }
+
   .selection__list {
     display: flex;
     flex-wrap: wrap;
@@ -52,10 +110,32 @@
 }
 
 @media (min-width: @desktop-width) {
+  .selection {
+    top: -14px;
+    margin-bottom: -14px;
+
+    ::after {
+      height: 50px;
+      width: 100%;
+      top: 99px;
+      right: 0;
+      background-size: 111%;
+  }
+}
+
   .selection__list {
     display: flex;
     flex-wrap: nowrap;
     margin: 0 auto;
     max-width: @desktop-width;
+  }
+
+  .selection__container li {
+    padding-top: 26px;
+    padding-bottom: 50px;
+  }
+
+  .selection__item span {
+    width: 31%;
   }
 }

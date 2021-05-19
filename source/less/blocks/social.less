@@ -3,13 +3,15 @@
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
-  padding-top: 25px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  padding-top: 30px;
   padding-bottom: 27px;
 }
 
 .social__item {
-  width: 30%;
+  width: 33.3%;
 }
 
 .social__item:first-child {
@@ -19,3 +21,39 @@
 .social__item:nth-child(2) {
   text-align: center;
 }
+
+.social__icon {
+  width: 22px;
+  fill: @black;
+
+  &:hover {
+    fill: @emailcolor;
+  }
+
+  &:active {
+    fill: @emailcolor;
+    fill-opacity: 30%;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    justify-content: start;
+    grid-column-gap: 41px;
+  }
+
+  .social__item {
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .social__list {
+    padding-left: 60px;
+    margin-right: 43px;
+  }
+}
+
+

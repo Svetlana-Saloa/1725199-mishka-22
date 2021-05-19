@@ -1,7 +1,44 @@
 .page-main__fone {
-  background-image: url("../img/mobile-bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: @gray-fone;
-  height: 283px;
+  background-image: url("../img/hero-mobile1.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 341px;
+
+    @media (min-resolution: 2dppx) {
+     background-image: url("../img/hero-mobile1@2x.jpg");
+     background-size: 343px;
+  }
 }
+
+@media (min-width: @tablet-width) {
+  .page-main__fone {
+    height: 556px;
+    background-color: @gray-fone;
+    background-image: url("../img/hero-tablet2.jpg");
+    background-repeat: no-repeat;
+    background-position: 2px 33%;
+
+      @media (min-resolution: 2dppx) {
+       background-image: url("../img/hero-mobile1@2x.jpg");
+       background-size: 600px;
+       background-position: 85px 33%;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__fone {
+    height: 556px;
+    background-color: @gray-fone;
+    background-image: url("../img/hero-desktop1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+      @media (min-resolution: 2dppx) {
+       background-image: url("../img/hero-desktop1@2x.jpg");
+       background-size: 1130px;
+    }
+  }
+}
+

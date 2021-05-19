@@ -3,6 +3,23 @@
   line-height: 30px;
   color: @gray;
   text-align: center;
+
+}
+
+.form-cart__item {
+  width: 82px;
+  height: 52px;
+  border: 2px solid @gray-cart;
+  text-align: center;
+  padding-top: 11px;
+
+  &:hover {
+   border-color: @gray-cart2;
+  }
+
+  &:active {
+    border-color: @blue-border;
+  }
 }
 
 .form-cart__fieldset {
@@ -15,6 +32,8 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-top: 18px;
+  padding-bottom: 31px;
   display: flex;
   justify-content: space-around;
 }
@@ -23,6 +42,7 @@
   font-size: 17px;
   line-height: 16px;
   font-weight: 700;
+
 }
 
 .form-cart__button {
@@ -32,4 +52,6 @@
   background-color: @blue-bacbackground;
   border: none;
   color: @white;
+  padding: 13px;
+  margin-bottom: 46px;
 }

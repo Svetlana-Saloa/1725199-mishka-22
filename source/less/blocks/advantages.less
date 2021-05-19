@@ -1,5 +1,70 @@
+.advantages {
+  padding-top: 38px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    background-image: url('../img/zigzag-line.svg');
+    background-repeat: repeat;
+    height: 6px;
+    width: 100%;
+    top: 0;
+    right: 0;
+  }
+}
+
 .advantages__title {
   font-size: 25px;
   line-height: 30px;
   margin: 0;
 }
+
+.adwantages__img {
+  width: 20%;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    padding-bottom: 85px;
+
+    &::after {
+      height: 13px;
+      top: 52px;
+      right: 0;
+      background-size: 100%;
+    }
+  }
+
+  .adwantages__img {
+    width: 15%;
+  }
+
+  .advantages__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 85px;
+    padding-bottom: 36px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    padding-top: 82px;
+    display: block;
+
+    &::after {
+      display: none;
+    }
+}
+
+  .advantages__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-left: 174px;
+    padding-top: 78px;
+  }
+}
+
+

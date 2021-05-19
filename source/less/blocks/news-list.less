@@ -9,7 +9,29 @@
 }
 
 @media (min-width: @tablet-width) {
-  .news-list__item:nth-child(-n+2) {
+  .news-list {
     display: none;
   }
 }
+
+@media (min-width: @desktop-width) {
+  .news-list {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .news-list__item {
+    padding-top: 18px;
+    font-size: 15px;
+
+    &:hover a {
+      color: @black6;
+    }
+
+    &:active a {
+      color: @black3;
+    }
+  }
+}
+

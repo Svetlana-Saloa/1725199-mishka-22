@@ -1,6 +1,24 @@
+.contacts {
+  position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      background-image: url('../img/zigzag-line.svg');
+      background-repeat: repeat;
+      height: 6px;
+      width: 100%;
+      top: 7px;
+      right: 0;
+  }
+}
+
 .contacts__container {
   min-width: @mobile-width;
-  padding: 0 30px;
+  padding-top: 49px;
+  margin-bottom: 62px;
+  display: grid;
 }
 
 .contacts__title {
@@ -11,6 +29,8 @@
 
 .contacts__mail,
 .contacts__address {
+  font-size: 14px;
+  line-height: 30px;
   display: flex;
   flex-wrap: nowrap;
   padding-top: 28px;
@@ -20,13 +40,13 @@
   line-height: 30px;
   color: @gray;
   margin: 0;
-  width: 30%;
+  width: 31%;
 }
 
 .contacts__link {
   line-height: 30px;
   margin: 0;
-  width: 70%;
+  width: 73%;
 }
 
 .contacts__link--link {
@@ -34,70 +54,151 @@
   color: @gray;
   border-bottom: 1px solid @blue-border;
   height: min-content;
+  width: min-content;
+
+  &:hover {
+    color: @emailcolor;
+  }
+
+  &:active {
+    color: @emailcolor;
+    border-bottom: none;
+  }
 }
 
 .contacts__button {
   border: 2px solid @gray;
   width: 260px;
   padding: 13px;
+
+  &:hover {
+    background-color: @gray;
+    color: @white;
+  }
+
+  &:active {
+    background-color: @gray;
+    color: @white3;
+  }
+}
+
+.contacts__container--button {
+  margin-top: 43px;
+  margin-bottom: 38px;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    padding-top: 163px;
+
+    &::after {
+      height: 14px;
+      top: 81px;
+      right: 0;
+      background-size: 100%;
+    }
+}
+
   .contacts__container {
     display: flex;
     flex-wrap: wrap;
     height: min-content;
-    padding: 0 50px;
+    padding-bottom: 49px;
+    padding-top: 0;
+    margin-bottom: 0;
   }
 
   .contacts__title {
     width: 100%;
+    font-size: 43px;
+    line-height: 50px;
   }
 
-  .contacts__mail {
+  .contacts__mail,
+  .contacts__address {
+    font-size: 17px;
+    line-height: 30px;
     width: 50%;
+    padding-top: 49px;
+  }
+
+  .contacts__text {
+    width: 23%;
   }
 
   .contacts__link {
     width: max-content;
   }
-
-  .contacts__address {
-    width: 50%;
+  .contacts__button {
+    width: 228px;
+    font-size: 17px;
   }
 
-  .contacts__container--button {
+  .contacts__container--button{
     text-align: center;
     width: 100%;
+    margin-top: 57px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts {
-    margin: 0 auto;
-    max-width: 1150px;
-    padding: 0 50px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &::after {
+      display: none;
+    }
   }
 
   .contacts__container {
-    width: 50%;
+    padding-top: 81px;
+    padding-left: 176px;
+    padding-bottom: 20px;
+    padding-right: 0;
   }
 
   .contacts__title {
     width: 100%;
+    font-size: 53px;
+    line-height: 57px;
   }
 
-  .contacts__mail {
-    width: 100%;
-  }
-
+  .contacts__mail,
   .contacts__address {
     width: 100%;
+    padding-top: 33px;
+  }
+
+  .contacts__link {
+    padding-left: 10px;
   }
 
   .contacts__container--button {
     margin: 0;
+    padding-left: 104px;
+    padding-top: 64px;
   }
+
+  .contacts__wrapp {
+    max-width: @desktop-width;
+    padding: 0 50px;
+    margin: 0 auto;
+    padding-top: 96px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      background-image: url('../img/zigzag-line.svg');
+      background-repeat: no-repeat;
+      height: 20px;
+      width: @desktop-width;
+      top: 0;
+      background-size: 92%;
+      right: -50px;
+      }
+    }
 }
