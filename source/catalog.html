@@ -2,12 +2,14 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page-body">
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
+      <div class="container page-header__container">
+        <a class="page-header__logo" href="index.html">
         <img src="img/mishka-logo-mobile.svg" alt="Логотип Мишка" width="86" height="35">
       </a>
       <nav class="main-navigation">
@@ -47,18 +49,26 @@
           </ul>
         </div>
       </nav>
+    </div>
     </header>
     <main class="page-catalog">
+      <div class="page-catalog__fone">
+        <div class="page-catalog__container container">
       <h1 class="page__title">Каталог товаров</h1>
+      </div>
+    </div>
       <section class="page-catalog__goods catalog-goods">
         <h2 class="visually-hidden">Список товаров</h2>
-        <ul class="catalog-goods__list">
+        <div class="page-catalog__container container">
+          <ul class="catalog-goods__list">
           <li class="catalog-goods__item">
             <a href="blank.html">
-              <h3 class="catalog-goods__title">Зайчик-попрыгайчик</h3>
-              <img src="img/knitted-bunny.jpg" alt="Игрушка вязаный зайчик-попрыгайчик" width="260" height="195">
+              <img  class="catalog-goods__img" src="img/knitted-bunny.jpg" alt="Игрушка вязаный зайчик-попрыгайчик" height="195">
             </a>
             <div class="catalog-goods__container">
+              <a class="catalog-goods__link" href="blank.html">
+                <h3 class="catalog-goods__title">Зайчик-попрыгайчик</h3>
+              </a>
             <p class="catalog-goods__text">Рост 30 см, вес 200 г</p>
             <b class="catalog-goods__price">1 200 руб.</b>
             <a class="catalog-goods__cart cart-goods" href="blank.html">
@@ -70,10 +80,12 @@
           </li>
           <li class="catalog-goods__item">
             <a href="blank.html">
-              <h3 class="catalog-goods__title">Корзинка для белья</h3>
-              <img src="img/knitted-laundry-baskets.jpg" alt="Вязаная корзинка для белья" width="260" height="195">
+              <img  class="catalog-goods__img" src="img/knitted-laundry-baskets.jpg" alt="Вязаная корзинка для белья" height="195">
             </a>
             <div class="catalog-goods__container">
+              <a class="catalog-goods__link" href="blank.html">
+                <h3 class="catalog-goods__title">Корзинка для белья</h3>
+              </a>
             <p class="catalog-goods__text">Диаметр 15 см, высота 10 см</p>
             <b class="catalog-goods__price">690 руб.</b>
             <a class="catalog-goods__cart cart-goods" href="blank.html">
@@ -85,10 +97,12 @@
           </li>
           <li class="catalog-goods__item">
             <a href="blank.html">
-              <h3 class="catalog-goods__title">Большая корзинка для игрушек</h3>
-              <img src="img/knitted-laundry-baskets.jpg" alt="Вязаная большая корзинка для игрушек" width="260" height="195">
+              <img  class="catalog-goods__img" src="img/knitted-toy-baskets.jpg" alt="Вязаная большая корзинка для игрушек" height="195">
             </a>
             <div class="catalog-goods__container">
+              <a class="catalog-goods__link" href="blank.html">
+                <h3 class="catalog-goods__title">Большая корзинка для игрушек</h3>
+              </a>
             <p class="catalog-goods__text">Диаметр 30 см, высота 30 см</p>
             <b class="catalog-goods__price">1 500 руб.</b>
             <a class="catalog-goods__cart cart-goods" href="blank.html">
@@ -99,25 +113,32 @@
             </div>
           </li>
         </ul>
+        </div>
       </section>
+      <div class="page-catalog__container container">
       <section class="page-catalog__process catalog-process">
-        <h2 class="catalog-process__title">Процесс производства</h2>
+        <div class="catalog-process__video">
+          <button class="catalog-process__play">Play</button>
+          <img class="catalog-process__img" src="img/video-process.jpg" alt="процес производства">
+        </div>
+        <div class="catalog-process__subject">
+          <h2 class="catalog-process__title">Процесс производства</h2>
         <svg class="catalog-process__svg" width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M26 10L32 6V22L26 18V10ZM24 10V18C24 20.2 22.2 22 20 22H4C1.8 22 0 20.2 0 18V10C0 7.8 1.8 6 4 6H14C14 4.9 14.9 4 16 4V2H5C4.4 2 4 1.6 4 1C4 0.4 4.4 0 5 0H17C17.6 0 18 0.4 18 1V4C19.1 4 20 4.9 20 6C22.2 6 24 7.8 24 10ZM12 10H4V18H12V10ZM20 11C20 10.4 19.6 10 19 10H15C14.4 10 14 10.4 14 11C14 11.6 14.4 12 15 12H19C19.6 12 20 11.6 20 11Z" fill="#63D1BB"/>
         </svg>
-        <div class="catalog-process__video">
-          <button class="catalog-process__play">Play</button>
-          <img src="img/video-process.jpg" alt="процес производства">
-        </div>
+      </div>
         <p class="catalog-process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="catalog-process__button button" href="blank.html" type="button">Сделать заказ</a>
+        <div class="catalog-process__wrap">
+        <a class="catalog-process__button button" href="blank.html">Сделать заказ</a>
+      </div>
       </section>
+    </div>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
+      <div class="page-footer__container container">
         <div class="page-footer__logo">
           <a>
-            <img src="img/mishka-logo-mobile.svg" alt="Логотип Мишка" width="86" height="35">
+          <img src="img/mishka-logo-mobile.svg" alt="Логотип Мишка" width="86" height="35">
           </a>
         </div>
         <section class="page-footer__social social">
@@ -150,15 +171,17 @@
           </ul>
         </section>
         <section class="page-footer__copyright copyright">
-        <h2 class="visually-hidden">Разработано в htmlacademy</h2>
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
-        </a>
-      </section>
-    </div>
+          <h2 class="visually-hidden">Разработано в htmlacademy</h2>
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <svg width="27" height="34" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+              <path fill="#2E368F" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/>
+            </svg>
+          </a>
+        </section>
+      </div>
     </footer>
-    <section class="modal-cart">
+    <section class="modal-cart container">
       <h2 class="modal-cart__text">Добавить в корзину</h2>
       <form class="modal-cart__form form-cart" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="form-cart__fieldset">
